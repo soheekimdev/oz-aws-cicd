@@ -16,4 +16,7 @@ jobs:
         run: npm run build
 
       - name: Debugging
-        run: ls
+        run: |
+          ls
+          cd dist
+          ls
