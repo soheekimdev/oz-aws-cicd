@@ -5,12 +5,15 @@ on:
     branches:
       - main
 
-jobs: 
-  deploy: 
+jobs:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Github Repository 파일 불러오기
         uses: actions/checkout@v4
 
-      - name: Repository 파일 출력하기
+      - name: 빌드하기
+        run: npm run build
+
+      - name: Debugging
         run: ls
